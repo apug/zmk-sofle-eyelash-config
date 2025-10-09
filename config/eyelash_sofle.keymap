@@ -111,9 +111,6 @@ ZMK_COMBO(selectall, &kp LC(A), LB4 LB3, BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(copy,      &kp LC(C), LB3 LB2, BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(paste,     &kp LC(V), LB2 LB1, BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-ZMK_COMBO(lbkt, &kp LBKT, RB1 RB2, BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(rbkt, &kp RBKT, RB2 RB3, BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-
 
 /* ──────────────────────────────────────────────────────────────── */
 /*                            Behaviors                             */
@@ -138,6 +135,14 @@ ZMK_BEHAVIOR(td0, tap_dance, tapping-term-ms = <200>; bindings = <&kp N0>, <&kp 
 
 // Backspace → Delete when Shift is held
 ZMK_MOD_MORPH(bspc_del, bindings = <&kp BSPC>, <&kp DEL>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+
+// Brackets: [ → { when Shift is held, ] → } when Shift is held
+ZMK_MOD_MORPH(mm_lbkt, bindings = <&kp LBKT>, <&kp LBRC>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(mm_rbkt, bindings = <&kp RBKT>, <&kp RBRC>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+
+// Tap dance for O and P: single tap = letter, double tap = bracket
+ZMK_BEHAVIOR(td_o, tap_dance, tapping-term-ms = <200>; bindings = <&kp O>, <&mm_lbkt>;)
+ZMK_BEHAVIOR(td_p, tap_dance, tapping-term-ms = <200>; bindings = <&kp P>, <&mm_rbkt>;)
 
 
 /* ──────────────────────────────────────────────────────────────── */
@@ -169,9 +174,9 @@ https://github.com/a741725193/zmk-sofle
 ZMK_LAYER(BASE,
   //                                                                                                             HAT CONTROLS
   // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                      ╭─────────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-      &kp GRAVE     &td1          &td2          &td3          &td4          &td5                                  &kp UP_ARROW        &td6          &td7          &td8          &td9          &td0          &bspc_del 
+      &kp GRAVE     &td1          &td2          &td3          &td4          &td5                                  &kp UP_ARROW        &td6          &td7          &td8          &td9          &td0          &bspc_del
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                                 &kp DOWN_ARROW      &kp Y         &kp U         &kp I         &kp O         &kp P         &kp BACKSLASH        
+      &kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                                 &kp DOWN_ARROW      &kp Y         &kp U         &kp I         &td_o         &td_p         &kp BACKSLASH        
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &kp LCTRL      &hml LGUI A   &hml LALT S   &hml LCTRL D   &hml LSHIFT F  &kp G                              &kp LEFT_ARROW      &kp H         &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L   &hmr RGUI SEMI  &kp APOS        
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
