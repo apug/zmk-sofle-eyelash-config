@@ -136,6 +136,9 @@ ZMK_BEHAVIOR(td8, tap_dance, tapping-term-ms = <200>; bindings = <&kp N8>, <&kp 
 ZMK_BEHAVIOR(td9, tap_dance, tapping-term-ms = <200>; bindings = <&kp N9>, <&kp LPAR>;)
 ZMK_BEHAVIOR(td0, tap_dance, tapping-term-ms = <200>; bindings = <&kp N0>, <&kp RPAR>;)
 
+// Backspace → Delete when Shift is held
+ZMK_MOD_MORPH(bspc_del, bindings = <&kp BSPC>, <&kp DEL>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+
 
 /* ──────────────────────────────────────────────────────────────── */
 /*                           Mouse bindings                         */
@@ -166,7 +169,7 @@ https://github.com/a741725193/zmk-sofle
 ZMK_LAYER(BASE,
   //                                                                                                             HAT CONTROLS
   // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                      ╭─────────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-      &kp GRAVE     &td1          &td2          &td3          &td4          &td5                                  &kp UP_ARROW        &td6          &td7          &td8          &td9          &td0          &kp BACKSPACE 
+      &kp GRAVE     &td1          &td2          &td3          &td4          &td5                                  &kp UP_ARROW        &td6          &td7          &td8          &td9          &td0          &bspc_del 
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                                 &kp DOWN_ARROW      &kp Y         &kp U         &kp I         &kp O         &kp P         &kp BACKSLASH        
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
