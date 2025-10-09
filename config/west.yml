@@ -11,7 +11,7 @@ manifest:
 
   projects:
     - name: zmk-sofle-eyelash-config
-      url: https://github.com/Arawasu/zmk-sofle-eyelash-config
+      url: https://github.com/apug/zmk-sofle-eyelash-config
       revision: main
 
     - name: hammerbeam-slideshow

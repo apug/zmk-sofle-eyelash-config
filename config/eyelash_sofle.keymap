@@ -158,11 +158,11 @@ ZMK_LAYER(BASE,
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                                 &kp DOWN_ARROW      &kp Y         &kp U         &kp I         &kp O         &kp P         &kp BACKSLASH        
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &mcaps        &kp A         &hml LALT S   &hml LGUI D   &hml LCTRL F  &kp G                                 &kp LEFT_ARROW      &kp H         &hmr RCTRL J  &hmr RGUI K   &hmr RALT L   &kp SEMI      &kp APOS        
+      &kp LCTRL      &kp A         &hml LALT S   &hml LGUI D   &hml LCTRL F  &kp G                                 &kp LEFT_ARROW      &kp H         &hmr RCTRL J  &hmr RGUI K   &hmr RALT L   &kp SEMI      &kp APOS        
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp LSHIFT    &kp Z         &kp X         &kp C         &kp V         &kp B                                 &kp RIGHT_ARROW     &kp N         &kp M         &kp COMMA     &kp PERIOD    &kp SLASH     &kp RSHIFT
+      &kp LSHIFT    &kp Z         &kp X         &kp C         &kp V         &kp B                                 &kp RIGHT_ARROW     &kp N         &kp M         &kp COMMA     &kp PERIOD    &kp SLASH     &kp MINUS 
   // ╰┬──────────┬─┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮   ╭────┴─────╮╭──────────┴──┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼
-       &kp C_MUTE                 &kp LCTRL     &kp LGUI      &kp SPACE     &mo NAV       &kp ESC           &mkp MCLK   HYPER         &mo FN        &kp ENTER     &kp RALT      &kp MINUS
+       &kp C_MUTE                 &kp LGUI       &kp LALT      &mo NAV      &kp SPACE       &kp ESC          &kp ENTER  &kp ENTER     &kp SPACE     &mo SYS     &kp RALT      &kp RCTRL
   //  ╰──────────╯               ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰──────────╯╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
   //  ENCODER PRESS                                                                                         HAT PRESS
 , &vol_encoder, "BASE")
