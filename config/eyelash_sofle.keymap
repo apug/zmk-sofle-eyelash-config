@@ -133,6 +133,14 @@ ZMK_BEHAVIOR(td8, tap_dance, tapping-term-ms = <200>; bindings = <&kp N8>, <&kp 
 ZMK_BEHAVIOR(td9, tap_dance, tapping-term-ms = <200>; bindings = <&kp N9>, <&kp LPAR>;)
 ZMK_BEHAVIOR(td0, tap_dance, tapping-term-ms = <200>; bindings = <&kp N0>, <&kp RPAR>;)
 
+// Ctrl/Caps Word: Tap for caps_word, Hold for LCTRL
+ZMK_HOLD_TAP(ht_ctrl_cw,
+  bindings = <&kp>, <&caps_word>;
+  flavor = "tap-preferred";
+  tapping-term-ms = <200>;
+  quick-tap-ms = <200>;
+)
+
 // Backspace → Delete when Shift is held
 ZMK_MOD_MORPH(bspc_del, bindings = <&kp BSPC>, <&kp DEL>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 
@@ -174,11 +182,11 @@ https://github.com/a741725193/zmk-sofle
 ZMK_LAYER(BASE,
   //                                                                                                             HAT CONTROLS
   // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                      ╭─────────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-      &kp GRAVE     &td1          &td2          &td3          &td4          &td5                                  &kp UP_ARROW        &td6          &td7          &td8          &td9          &td0          &bspc_del
+      &kp GRAVE     &td1          &td2          &td3          &td4          &td5                                  &kp UP_ARROW        &td6          &td7          &td8          &td9          &td0          &kp EQUAL
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                                 &kp DOWN_ARROW      &kp Y         &kp U         &kp I         &td_o         &td_p         &kp BACKSLASH        
+      &kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                                 &kp DOWN_ARROW      &kp Y         &kp U         &kp I         &td_o         &td_p         &kp BACKSLASH
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp LCTRL      &hml LGUI A   &hml LALT S   &hml LCTRL D   &hml LSHIFT F  &kp G                              &kp LEFT_ARROW      &kp H         &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L   &hmr RGUI SEMI  &kp APOS        
+      &ht_ctrl_cw LCTRL 0  &hml LGUI A   &hml LALT S   &hml LCTRL D   &hml LSHIFT F  &kp G                       &kp LEFT_ARROW      &kp H         &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L   &hmr RGUI SEMI  &kp APOS        
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &kp LSHIFT    &kp Z         &kp X         &kp C         &kp V         &kp B                                 &kp RIGHT_ARROW     &kp N         &kp M         &kp COMMA     &kp PERIOD    &kp SLASH     &kp MINUS 
   // ╰┬──────────┬─┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮   ╭────┴─────╮╭──────────┴──┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼
