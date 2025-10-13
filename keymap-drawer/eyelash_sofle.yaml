@@ -2,18 +2,18 @@ layout: {zmk_keyboard: eyelash_sofle}
 layers:
   BASE:
   - {t: '`', s: '~'}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
+  - '&td1'
+  - '&td2'
+  - '&td3'
+  - '&td4'
+  - '&td5'
   - $$mdi:arrow-up-bold$$
-  - {t: '6', s: ^}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
-  - {t: '0', s: )}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - '&td6'
+  - '&td7'
+  - '&td8'
+  - '&td9'
+  - '&td0'
+  - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -24,8 +24,8 @@ layers:
   - Y
   - U
   - I
-  - O
-  - P
+  - '&td_o'
+  - '&td_p'
   - {t: \, s: '|'}
   - $$mdi:apple-keyboard-control$$
   - {t: A, h: LGUI}
@@ -60,8 +60,8 @@ layers:
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:keyboard-space$$
   - SYS
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
@@ -99,10 +99,10 @@ layers:
   - PG DN
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-up-bold$$
+  - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -112,10 +112,10 @@ layers:
   - $$mdi:skip-previous$$
   - $$mdi:skip-next$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {t: BASE, h: toggle}
-  - {t: NAV, h: toggle}
-  - {t: SYS, h: toggle}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - HOME
+  - PG UP
+  - PG DN
+  - END
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -269,10 +269,4 @@ combos:
   l: [BASE]
 - p: [42, 43]
   k: Ctl+V
-  l: [BASE]
-- p: [47, 48]
-  k: {h: '[', s: '{'}
-  l: [BASE]
-- p: [48, 49]
-  k: {h: ']', s: '}'}
   l: [BASE]
