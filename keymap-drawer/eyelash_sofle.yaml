@@ -13,7 +13,7 @@ layers:
   - '&td8'
   - '&td9'
   - '&td0'
-  - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
+  - {t: '=', s: +}
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -27,7 +27,7 @@ layers:
   - '&td_o'
   - '&td_p'
   - {t: \, s: '|'}
-  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:alpha-w-box$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: A, h: LGUI}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
