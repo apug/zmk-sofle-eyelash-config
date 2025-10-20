@@ -15,7 +15,7 @@ layers:
   - '&td0'
   - {t: '=', s: +}
   - $$mdi:keyboard-tab$$
-  - Q
+  - '&td_q'
   - W
   - E
   - R
