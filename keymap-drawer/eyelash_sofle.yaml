@@ -55,15 +55,15 @@ layers:
   - {t: '-', s: _}
   - $$mdi:volume-off$$
   - LGUI
-  - $$mdi:apple-keyboard-option$$
   - NAV
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - SYS
-  - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
   NAV:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -120,8 +120,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Alt+$$mdi:backspace-reverse-outline$$
   - $$mdi:mouse-scroll-wheel$$
@@ -257,8 +257,8 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [40, 41]
