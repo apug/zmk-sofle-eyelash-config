@@ -152,6 +152,9 @@ ZMK_MOD_MORPH(mm_rbkt, bindings = <&kp RBKT>, <&kp RBRC>; mods = <(MOD_LSFT|MOD_
 ZMK_BEHAVIOR(td_o, tap_dance, tapping-term-ms = <200>; bindings = <&kp O>, <&mm_lbkt>;)
 ZMK_BEHAVIOR(td_p, tap_dance, tapping-term-ms = <200>; bindings = <&kp P>, <&mm_rbkt>;)
 
+// Tap dance for Q: single tap = Q, double tap = TAB
+ZMK_BEHAVIOR(td_q, tap_dance, tapping-term-ms = <200>; bindings = <&kp Q>, <&kp TAB>;)
+
 
 /* ──────────────────────────────────────────────────────────────── */
 /*                           Mouse bindings                         */
@@ -184,7 +187,7 @@ ZMK_LAYER(BASE,
   // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                      ╭─────────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
       &kp GRAVE     &td1          &td2          &td3          &td4          &td5                                  &kp UP_ARROW        &td6          &td7          &td8          &td9          &td0          &kp EQUAL
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                                 &kp DOWN_ARROW      &kp Y         &kp U         &kp I         &td_o         &td_p         &kp BACKSLASH
+      &kp TAB       &td_q         &kp W         &kp E         &kp R         &kp T                                 &kp DOWN_ARROW      &kp Y         &kp U         &kp I         &td_o         &td_p         &kp BACKSLASH
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &ht_ctrl_cw LCTRL 0  &hml LGUI A   &hml LALT S   &hml LCTRL D   &hml LSHIFT F  &kp G                       &kp LEFT_ARROW      &kp H         &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L   &hmr RGUI SEMI  &kp APOS        
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
