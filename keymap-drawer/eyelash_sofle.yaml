@@ -15,7 +15,7 @@ layers:
   - '&td0'
   - {t: '=', s: +}
   - $$mdi:keyboard-tab$$
-  - Q
+  - '&td_q'
   - W
   - E
   - R
@@ -61,10 +61,10 @@ layers:
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
-  - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:apple-keyboard-option$$
   - SYS
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
   NAV:
   - {t: '$$mdi:transfer$$', type: trans}
   - F1
