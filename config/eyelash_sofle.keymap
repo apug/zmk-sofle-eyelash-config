@@ -111,6 +111,12 @@ ZMK_COMBO(selectall, &kp LC(A), LB4 LB3, BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(copy,      &kp LC(C), LB3 LB2, BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(paste,     &kp LC(V), LB2 LB1, BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
+// Bracket combos
+ZMK_COMBO(lbracket,  &kp LBKT,  RN4 RT3, BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)  // 9 + O → [
+ZMK_COMBO(rbracket,  &kp RBKT,  RN5 RT4, BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)  // 0 + P → ]
+ZMK_COMBO(lbrace,    &kp LBRC,  RT2 RT3, BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)  // I + O → {
+ZMK_COMBO(rbrace,    &kp RBRC,  RT3 RT4, BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)  // O + P → }
+
 
 /* ──────────────────────────────────────────────────────────────── */
 /*                            Behaviors                             */
@@ -155,6 +161,14 @@ ZMK_BEHAVIOR(td_p, tap_dance, tapping-term-ms = <200>; bindings = <&kp P>, <&mm_
 // Tap dance for Q: single tap = Q, double tap = TAB
 ZMK_BEHAVIOR(td_q, tap_dance, tapping-term-ms = <200>; bindings = <&kp Q>, <&kp TAB>;)
 
+// Tap dance for punctuation
+ZMK_BEHAVIOR(td_bslh, tap_dance, tapping-term-ms = <200>; bindings = <&kp BSLH>, <&kp PIPE>;)    // \ → |
+ZMK_BEHAVIOR(td_semi, tap_dance, tapping-term-ms = <200>; bindings = <&kp SEMI>, <&kp COLON>;)   // ; → :
+ZMK_BEHAVIOR(td_minus, tap_dance, tapping-term-ms = <200>; bindings = <&kp MINUS>, <&kp UNDER>;) // - → _
+ZMK_BEHAVIOR(td_comma, tap_dance, tapping-term-ms = <200>; bindings = <&kp COMMA>, <&kp LT>;)    // , → <
+ZMK_BEHAVIOR(td_dot, tap_dance, tapping-term-ms = <200>; bindings = <&kp DOT>, <&kp GT>;)        // . → >
+ZMK_BEHAVIOR(td_slash, tap_dance, tapping-term-ms = <200>; bindings = <&kp SLASH>, <&kp QMARK>;) // / → ?
+
 
 /* ──────────────────────────────────────────────────────────────── */
 /*                           Mouse bindings                         */
@@ -187,11 +201,11 @@ ZMK_LAYER(BASE,
   // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                      ╭─────────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
       &kp GRAVE     &td1          &td2          &td3          &td4          &td5                                  &kp UP_ARROW        &td6          &td7          &td8          &td9          &td0          &kp EQUAL
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp TAB       &td_q         &kp W         &kp E         &kp R         &kp T                                 &kp DOWN_ARROW      &kp Y         &kp U         &kp I         &td_o         &td_p         &kp BACKSLASH
+      &kp TAB       &td_q         &kp W         &kp E         &kp R         &kp T                                 &kp DOWN_ARROW      &kp Y         &kp U         &kp I         &td_o         &td_p         &td_bslh
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &ht_ctrl_cw LCTRL 0  &hml LGUI A   &hml LALT S   &hml LCTRL D   &hml LSHIFT F  &kp G                       &kp LEFT_ARROW      &kp H         &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L   &hmr RGUI SEMI  &kp APOS        
+      &ht_ctrl_cw LCTRL 0  &hml LGUI A   &hml LALT S   &hml LCTRL D   &hml LSHIFT F  &kp G                       &kp LEFT_ARROW      &kp H         &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L   &hmr RGUI &td_semi  &kp APOS
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp LSHIFT    &kp Z         &kp X         &kp C         &kp V         &kp B                                 &kp RIGHT_ARROW     &kp N         &kp M         &kp COMMA     &kp PERIOD    &kp SLASH     &kp MINUS 
+      &kp LSHIFT    &kp Z         &kp X         &kp C         &kp V         &kp B                                 &kp RIGHT_ARROW     &kp N         &kp M         &td_comma     &td_dot       &td_slash     &td_minus 
   // ╰┬──────────┬─┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮   ╭────┴─────╮╭──────────┴──┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼
        &kp C_MUTE                 &kp LGUI       &mo CODE      &kp LALT      &kp SPACE       &kp ESC          &kp ENTER  &bspc_del     &kp ENTER     &kp RALT    &mo SYS        &kp RALT
   //  ╰──────────╯               ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰──────────╯╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
