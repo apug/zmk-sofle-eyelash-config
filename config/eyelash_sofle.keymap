@@ -128,22 +128,22 @@ ZMK_BEHAVIOR(mcaps, macro,
 )
 
 // Tap dance for numbers: single tap = number, double tap = symbol
-ZMK_BEHAVIOR(td1, tap_dance, tapping-term-ms = <150>; bindings = <&kp N1>, <&kp EXCL>;)
-ZMK_BEHAVIOR(td2, tap_dance, tapping-term-ms = <150>; bindings = <&kp N2>, <&kp AT>;)
-ZMK_BEHAVIOR(td3, tap_dance, tapping-term-ms = <150>; bindings = <&kp N3>, <&kp HASH>;)
-ZMK_BEHAVIOR(td4, tap_dance, tapping-term-ms = <150>; bindings = <&kp N4>, <&kp DLLR>;)
-ZMK_BEHAVIOR(td5, tap_dance, tapping-term-ms = <150>; bindings = <&kp N5>, <&kp PRCNT>;)
-ZMK_BEHAVIOR(td6, tap_dance, tapping-term-ms = <150>; bindings = <&kp N6>, <&kp CARET>;)
-ZMK_BEHAVIOR(td7, tap_dance, tapping-term-ms = <150>; bindings = <&kp N7>, <&kp AMPS>;)
-ZMK_BEHAVIOR(td8, tap_dance, tapping-term-ms = <150>; bindings = <&kp N8>, <&kp ASTRK>;)
-ZMK_BEHAVIOR(td9, tap_dance, tapping-term-ms = <150>; bindings = <&kp N9>, <&kp LPAR>;)
-ZMK_BEHAVIOR(td0, tap_dance, tapping-term-ms = <150>; bindings = <&kp N0>, <&kp RPAR>;)
+ZMK_BEHAVIOR(td1, tap_dance, tapping-term-ms = <175>; bindings = <&kp N1>, <&kp EXCL>;)
+ZMK_BEHAVIOR(td2, tap_dance, tapping-term-ms = <175>; bindings = <&kp N2>, <&kp AT>;)
+ZMK_BEHAVIOR(td3, tap_dance, tapping-term-ms = <175>; bindings = <&kp N3>, <&kp HASH>;)
+ZMK_BEHAVIOR(td4, tap_dance, tapping-term-ms = <175>; bindings = <&kp N4>, <&kp DLLR>;)
+ZMK_BEHAVIOR(td5, tap_dance, tapping-term-ms = <175>; bindings = <&kp N5>, <&kp PRCNT>;)
+ZMK_BEHAVIOR(td6, tap_dance, tapping-term-ms = <175>; bindings = <&kp N6>, <&kp CARET>;)
+ZMK_BEHAVIOR(td7, tap_dance, tapping-term-ms = <175>; bindings = <&kp N7>, <&kp AMPS>;)
+ZMK_BEHAVIOR(td8, tap_dance, tapping-term-ms = <175>; bindings = <&kp N8>, <&kp ASTRK>;)
+ZMK_BEHAVIOR(td9, tap_dance, tapping-term-ms = <175>; bindings = <&kp N9>, <&kp LPAR>;)
+ZMK_BEHAVIOR(td0, tap_dance, tapping-term-ms = <175>; bindings = <&kp N0>, <&kp RPAR>;)
 
 // Ctrl/Caps Word: Tap for caps_word, Hold for LCTRL
 ZMK_HOLD_TAP(ht_ctrl_cw,
   bindings = <&kp>, <&caps_word>;
   flavor = "tap-preferred";
-  tapping-term-ms = <150>;
+  tapping-term-ms = <175>;
   quick-tap-ms = <200>;
 )
 
@@ -155,19 +155,22 @@ ZMK_MOD_MORPH(mm_lbkt, bindings = <&kp LBKT>, <&kp LBRC>; mods = <(MOD_LSFT|MOD_
 ZMK_MOD_MORPH(mm_rbkt, bindings = <&kp RBKT>, <&kp RBRC>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 
 // Tap dance for O and P: single tap = letter, double tap = bracket
-ZMK_BEHAVIOR(td_o, tap_dance, tapping-term-ms = <150>; bindings = <&kp O>, <&mm_lbkt>;)
-ZMK_BEHAVIOR(td_p, tap_dance, tapping-term-ms = <150>; bindings = <&kp P>, <&mm_rbkt>;)
+ZMK_BEHAVIOR(td_o, tap_dance, tapping-term-ms = <175>; bindings = <&kp O>, <&mm_lbkt>;)
+ZMK_BEHAVIOR(td_p, tap_dance, tapping-term-ms = <175>; bindings = <&kp P>, <&mm_rbkt>;)
 
 // Tap dance for Q: single tap = Q, double tap = TAB
-ZMK_BEHAVIOR(td_q, tap_dance, tapping-term-ms = <150>; bindings = <&kp Q>, <&kp TAB>;)
+ZMK_BEHAVIOR(td_q, tap_dance, tapping-term-ms = <175>; bindings = <&kp Q>, <&kp TAB>;)
 
 // Tap dance for punctuation
-ZMK_BEHAVIOR(td_bslh, tap_dance, tapping-term-ms = <150>; bindings = <&kp BSLH>, <&kp PIPE>;)    // \ → |
-ZMK_BEHAVIOR(td_semi, tap_dance, tapping-term-ms = <150>; bindings = <&kp SEMI>, <&kp COLON>;)   // ; → :
-ZMK_BEHAVIOR(td_minus, tap_dance, tapping-term-ms = <150>; bindings = <&kp MINUS>, <&kp UNDER>;) // - → _
-ZMK_BEHAVIOR(td_comma, tap_dance, tapping-term-ms = <150>; bindings = <&kp COMMA>, <&kp LT>;)    // , → <
-ZMK_BEHAVIOR(td_dot, tap_dance, tapping-term-ms = <150>; bindings = <&kp DOT>, <&kp GT>;)        // . → >
-ZMK_BEHAVIOR(td_slash, tap_dance, tapping-term-ms = <150>; bindings = <&kp SLASH>, <&kp QMARK>;) // / → ?
+ZMK_BEHAVIOR(td_bslh, tap_dance, tapping-term-ms = <175>; bindings = <&kp BSLH>, <&kp PIPE>;)    // \ → |
+ZMK_BEHAVIOR(td_semi, tap_dance, tapping-term-ms = <175>; bindings = <&kp SEMI>, <&kp COLON>;)   // ; → :
+ZMK_BEHAVIOR(td_apos, tap_dance, tapping-term-ms = <175>; bindings = <&kp APOS>, <&kp DQT>;)     // ' → "
+ZMK_BEHAVIOR(td_minus, tap_dance, tapping-term-ms = <175>; bindings = <&kp MINUS>, <&kp UNDER>;) // - → _
+ZMK_BEHAVIOR(td_comma, tap_dance, tapping-term-ms = <175>; bindings = <&kp COMMA>, <&kp LT>;)    // , → <
+ZMK_BEHAVIOR(td_dot, tap_dance, tapping-term-ms = <175>; bindings = <&kp DOT>, <&kp GT>;)        // . → >
+ZMK_BEHAVIOR(td_slash, tap_dance, tapping-term-ms = <175>; bindings = <&kp SLASH>, <&kp QMARK>;) // / → ?
+ZMK_BEHAVIOR(td_grave, tap_dance, tapping-term-ms = <175>; bindings = <&kp GRAVE>, <&kp TILDE>;) // ` → ~
+ZMK_BEHAVIOR(td_equal, tap_dance, tapping-term-ms = <175>; bindings = <&kp EQUAL>, <&kp PLUS>;)  // = → +
 
 
 /* ──────────────────────────────────────────────────────────────── */
@@ -199,11 +202,11 @@ https://github.com/a741725193/zmk-sofle
 ZMK_LAYER(BASE,
   //                                                                                                             HAT CONTROLS
   // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                      ╭─────────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-      &kp GRAVE     &td1          &td2          &td3          &td4          &td5                                  &kp UP_ARROW        &td6          &td7          &td8          &td9          &td0          &kp EQUAL
+      &td_grave     &td1          &td2          &td3          &td4          &td5                                  &kp UP_ARROW        &td6          &td7          &td8          &td9          &td0          &td_equal
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &kp TAB       &td_q         &kp W         &kp E         &kp R         &kp T                                 &kp DOWN_ARROW      &kp Y         &kp U         &kp I         &td_o         &td_p         &td_bslh
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &ht_ctrl_cw LCTRL 0  &hml LGUI A   &hml LALT S   &hml LCTRL D   &hml LSHIFT F  &kp G                       &kp LEFT_ARROW      &kp H         &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L   &hmr RGUI &td_semi  &kp APOS
+      &ht_ctrl_cw LCTRL 0  &hml LGUI A   &hml LALT S   &hml LCTRL D   &hml LSHIFT F  &kp G                       &kp LEFT_ARROW      &kp H         &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L   &td_semi       &td_apos
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                      ├─────────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &kp LSHIFT    &kp Z         &kp X         &kp C         &kp V         &kp B                                 &kp RIGHT_ARROW     &kp N         &kp M         &td_comma     &td_dot       &td_slash     &td_minus 
   // ╰┬──────────┬─┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮   ╭────┴─────╮╭──────────┴──┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼
