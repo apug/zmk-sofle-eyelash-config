@@ -26,7 +26,7 @@ layers:
   - I
   - '&td_o'
   - '&td_p'
-  - {t: \, s: '|'}
+  - '&td_bslh'
   - {t: '$$mdi:alpha-w-box$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: A, h: LGUI}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
@@ -38,7 +38,8 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ;, h: RGUI, s: ':'}
+  - '&hmr RGUI'
+  - '&td_semi'
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - Z
@@ -49,10 +50,10 @@ layers:
   - $$mdi:arrow-right-bold$$
   - N
   - M
-  - {t: ',', s: <}
-  - .
-  - {t: /, s: '?'}
-  - {t: '-', s: _}
+  - '&td_comma'
+  - '&td_dot'
+  - '&td_slash'
+  - '&td_minus'
   - $$mdi:volume-off$$
   - LGUI
   - CODE
@@ -64,7 +65,6 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:apple-keyboard-option$$
   - SYS
-  - $$mdi:apple-keyboard-option$$
   CODE:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
@@ -120,8 +120,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Alt+$$mdi:backspace-reverse-outline$$
   - $$mdi:mouse-scroll-wheel$$
@@ -258,8 +258,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
 combos:
 - p: [40, 41]
   k: Ctl+A
@@ -269,4 +269,16 @@ combos:
   l: [BASE]
 - p: [42, 43]
   k: Ctl+V
+  l: [BASE]
+- p: [11, 23]
+  k: {t: '[', s: '{'}
+  l: [BASE]
+- p: [12, 24]
+  k: {t: ']', s: '}'}
+  l: [BASE]
+- p: [22, 23]
+  k: '{'
+  l: [BASE]
+- p: [23, 24]
+  k: '}'
   l: [BASE]
