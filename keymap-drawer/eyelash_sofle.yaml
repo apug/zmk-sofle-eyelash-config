@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   BASE:
-  - {t: '`', s: '~'}
+  - '&td_grave'
   - '&td1'
   - '&td2'
   - '&td3'
@@ -13,7 +13,7 @@ layers:
   - '&td8'
   - '&td9'
   - '&td0'
-  - {t: '=', s: +}
+  - '&td_equal'
   - $$mdi:keyboard-tab$$
   - '&td_q'
   - W
@@ -38,9 +38,8 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - '&hmr RGUI'
   - '&td_semi'
-  - {t: '''', s: '"'}
+  - '&td_apos'
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -65,6 +64,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:apple-keyboard-option$$
   - SYS
+  - {t: CODE, h: toggle}
   CODE:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
@@ -120,8 +120,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Alt+$$mdi:backspace-reverse-outline$$
   - $$mdi:mouse-scroll-wheel$$
@@ -129,7 +129,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: FN, h: toggle}
   FN:
   - {t: '$$mdi:transfer$$', type: trans}
   - F1
@@ -194,7 +194,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: SYS, h: toggle}
   SYS:
   - {t: '$$mdi:transfer$$', type: trans}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
@@ -258,8 +258,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: BASE, h: toggle}
 combos:
 - p: [40, 41]
   k: Ctl+A
