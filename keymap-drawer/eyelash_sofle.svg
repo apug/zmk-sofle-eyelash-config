@@ -638,14 +638,14 @@ rect.held, rect.combo.held {
 <text x="224" y="200" class="combo tap">Ctl+V</text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="798" y="61" width="28" height="26" class="combo"/>
-<text x="812" y="74" class="combo tap">[</text>
-<text x="812" y="63" class="combo shifted">{</text>
+<rect rx="6" ry="6" x="742" y="46" width="28" height="26" class="combo"/>
+<text x="756" y="60" class="combo tap">[</text>
+<text x="756" y="48" class="combo shifted">{</text>
 </g>
 <g class="combo combopos-4">
-<rect rx="6" ry="6" x="854" y="71" width="28" height="26" class="combo"/>
-<text x="868" y="84" class="combo tap">]</text>
-<text x="868" y="73" class="combo shifted">}</text>
+<rect rx="6" ry="6" x="798" y="61" width="28" height="26" class="combo"/>
+<text x="812" y="74" class="combo tap">]</text>
+<text x="812" y="63" class="combo shifted">}</text>
 </g>
 <g class="combo combopos-5">
 <rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
